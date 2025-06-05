@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davidson College Summer Programs 2025 - Color-Coded Sign Schedule</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            opacity: 0.9;
+        }
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 4px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .table-container {
+            overflow-x: auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th {
+            background: #374151;
+            color: white;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 13px;
+        }
+        tr:hover {
+            background-color: rgba(0,0,0,0.02);
+        }
+        .busy-days {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .busy-days h3 {
+            color: #374151;
+            margin-top: 0;
+        }
+        .month-section {
+            margin-bottom: 20px;
+        }
+        .month-title {
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .day-entry {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 4px solid #3b82f6;
+        }
+        .notes {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 4px;
+        }
+        .notes h4 {
+            margin-top: 0;
+            color: #92400e;
+        }
+        
+        /* Color assignments for different camp types */
+        .mcnab { background-color: #fef2f2; }
+        .womens-basketball { background-color: #fff7ed; }
+        .womens-soccer { background-color: #fefce8; }
+        .immersion { background-color: #f0fdf4; }
+        .lavner { background-color: #f0fdfa; }
+        .mens-soccer { background-color: #f0f9ff; }
+        .baseball { background-color: #eff6ff; }
+        .mens-basketball { background-color: #eef2ff; }
+        .football { background-color: #f3e8ff; }
+        .apsi { background-color: #fdf4ff; }
+        .id-tech { background-color: #fef7f7; }
+        .theatre { background-color: #f8fafc; }
+        .wrestling { background-color: #f1f5f9; }
+        .ds-promise { background-color: #ecfdf5; }
+        .tennis { background-color: #f0fdfa; }
+        .larche { background-color: #ecfccb; }
+        .volleyball { background-color: #fefce8; }
+        .lacrosse { background-color: #fff7ed; }
+        .s2f-track { background-color: #fef2f2; }
+        .nc-writers { background-color: #f3e8ff; }
+        .nc-youth-orchestra { background-color: #eef2ff; }
+        .underrated { background-color: #eff6ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Davidson College Summer Programs 2025</h1>
+            <p>Color-Coded Sign Installation/Removal Schedule</p>
+            <p><strong>Rule:</strong> Signs go up the day before camp starts, removed at end of camp's last day</p>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color mcnab"></div>
+                <span>McNab</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color womens-basketball"></div>
+                <span>Women's Basketball</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color womens-soccer"></div>
+                <span>Women's Soccer</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color immersion"></div>
+                <span>Immersion Camps</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color lavner"></div>
+                <span>Lavner Education</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color mens-soccer"></div>
+                <span>Men's Soccer</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color baseball"></div>
+                <span>Baseball</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color mens-basketball"></div>
+                <span>Men's Basketball</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color football"></div>
+                <span>Football</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color apsi"></div>
+                <span>APSI</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color id-tech"></div>
+                <span>ID Tech Camps</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color theatre"></div>
+                <span>Theatre Program</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color wrestling"></div>
+                <span>Wrestling</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color ds-promise"></div>
+                <span>DS Promise Program</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color tennis"></div>
+                <span>Tennis</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color larche"></div>
+                <span>L'Arche</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color volleyball"></div>
+                <span>Volleyball</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color lacrosse"></div>
+                <span>Lacrosse</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color s2f-track"></div>
+                <span>S2F Track & Field</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color nc-writers"></div>
+                <span>NC Writer's Network</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color nc-youth-orchestra"></div>
+                <span>NC Youth Orchestra</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color underrated"></div>
+                <span>Underrated Showcase</span>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Camp Name</th>
+                        <th>Session</th>
+                        <th>Camp Start Date</th>
+                        <th>Camp End Date</th>
+                        <th>Install Signs</th>
+                        <th>Remove Signs</th>
+                        <th>Duration</th>
+                        <th>Housing/Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="mcnab">
+                        <td><strong>McNab</strong></td>
+                        <td>Session 1</td>
+                        <td>June 5</td>
+                        <td>June 6</td>
+                        <td>June 4</td>
+                        <td>June 6</td>
+                        <td>2 days</td>
+                        <td>Athletic facilities/performance halls</td>
+                    </tr>
+                    <tr class="womens-basketball">
+                        <td><strong>Women's Basketball</strong></td>
+                        <td>Session 1</td>
+                        <td>June 5</td>
+                        <td>June 5</td>
+                        <td>June 4</td>
+                        <td>June 5</td>
+                        <td>1 day</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="womens-soccer">
+                        <td><strong>Women's Soccer</strong></td>
+                        <td>Session 1</td>
+                        <td>June 8</td>
+                        <td>June 8</td>
+                        <td>June 7</td>
+                        <td>June 8</td>
+                        <td>1 day</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="immersion">
+                        <td><strong>Immersion Camps</strong></td>
+                        <td>Session 1</td>
+                        <td>June 9</td>
+                        <td>June 15</td>
+                        <td>June 8</td>
+                        <td>June 15</td>
+                        <td>7 days</td>
+                        <td>Watts Building (79 beds)</td>
+                    </tr>
+                    <tr class="lavner">
+                        <td><strong>Lavner Education</strong></td>
+                        <td>Continuous</td>
+                        <td>June 9</td>
+                        <td>July 25</td>
+                        <td>June 8</td>
+                        <td>July 25</td>
+                        <td>47 days</td>
+                        <td>Watson Classrooms</td>
+                    </tr>
+                    <tr class="womens-basketball">
+                        <td><strong>Women's Basketball</strong></td>
+                        <td>Session 2</td>
+                        <td>June 9</td>
+                        <td>June 11</td>
+                        <td>June 8</td>
+                        <td>June 11</td>
+                        <td>3 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-soccer">
+                        <td><strong>Men's Soccer</strong></td>
+                        <td>Session 1</td>
+                        <td>June 11</td>
+                        <td>June 13</td>
+                        <td>June 10</td>
+                        <td>June 13</td>
+                        <td>3 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="baseball">
+                        <td><strong>Baseball</strong></td>
+                        <td>Session 1</td>
+                        <td>June 11</td>
+                        <td>June 11</td>
+                        <td>June 10</td>
+                        <td>June 11</td>
+                        <td>1 day</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-basketball">
+                        <td><strong>Men's Basketball</strong></td>
+                        <td>Jay Bilas Camp</td>
+                        <td>June 13</td>
+                        <td>June 15</td>
+                        <td>June 12</td>
+                        <td>June 15</td>
+                        <td>3 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="football">
+                        <td><strong>Football</strong></td>
+                        <td>Session 1</td>
+                        <td>June 14</td>
+                        <td>June 14</td>
+                        <td>June 13</td>
+                        <td>June 14</td>
+                        <td>1 day</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="apsi">
+                        <td><strong>APSI</strong></td>
+                        <td>Session 1</td>
+                        <td>June 15</td>
+                        <td>June 19</td>
+                        <td>June 14</td>
+                        <td>June 19</td>
+                        <td>5 days</td>
+                        <td>Ryburn Building (56 beds)</td>
+                    </tr>
+                    <tr class="mens-basketball">
+                        <td><strong>Men's Basketball</strong></td>
+                        <td>Session 1</td>
+                        <td>June 15</td>
+                        <td>June 19</td>
+                        <td>June 14</td>
+                        <td>June 19</td>
+                        <td>5 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 1</td>
+                        <td>June 16</td>
+                        <td>June 20</td>
+                        <td>June 15</td>
+                        <td>June 20</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="immersion">
+                        <td><strong>Immersion Camps</strong></td>
+                        <td>Session 2</td>
+                        <td>June 16</td>
+                        <td>June 22</td>
+                        <td>June 15</td>
+                        <td>June 22</td>
+                        <td>7 days</td>
+                        <td>Watts Building (79 beds)</td>
+                    </tr>
+                    <tr class="theatre">
+                        <td><strong>Theatre Program</strong></td>
+                        <td>-</td>
+                        <td>June 16</td>
+                        <td>June 21</td>
+                        <td>June 15</td>
+                        <td>June 21</td>
+                        <td>6 days</td>
+                        <td>Jamieson Building (48 beds)</td>
+                    </tr>
+                    <tr class="wrestling">
+                        <td><strong>Wrestling</strong></td>
+                        <td>-</td>
+                        <td>June 16</td>
+                        <td>June 19</td>
+                        <td>June 15</td>
+                        <td>June 19</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="baseball">
+                        <td><strong>Baseball</strong></td>
+                        <td>Session 2</td>
+                        <td>June 16</td>
+                        <td>June 19</td>
+                        <td>June 15</td>
+                        <td>June 19</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-soccer">
+                        <td><strong>Men's Soccer</strong></td>
+                        <td>Session 2</td>
+                        <td>June 16</td>
+                        <td>June 20</td>
+                        <td>June 15</td>
+                        <td>June 20</td>
+                        <td>5 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="womens-basketball">
+                        <td><strong>Women's Basketball</strong></td>
+                        <td>Session 3</td>
+                        <td>June 16</td>
+                        <td>June 19</td>
+                        <td>June 15</td>
+                        <td>June 19</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="ds-promise">
+                        <td><strong>DS Promise Program</strong></td>
+                        <td>-</td>
+                        <td>June 22</td>
+                        <td>June 28</td>
+                        <td>June 21</td>
+                        <td>June 28</td>
+                        <td>7 days</td>
+                        <td>Duke Building (94 beds)</td>
+                    </tr>
+                    <tr class="apsi">
+                        <td><strong>APSI</strong></td>
+                        <td>Session 2</td>
+                        <td>June 22</td>
+                        <td>June 26</td>
+                        <td>June 21</td>
+                        <td>June 26</td>
+                        <td>5 days</td>
+                        <td>Ryburn Building (56 beds)</td>
+                    </tr>
+                    <tr class="immersion">
+                        <td><strong>Immersion Camps</strong></td>
+                        <td>Session 3</td>
+                        <td>June 23</td>
+                        <td>June 26</td>
+                        <td>June 22</td>
+                        <td>June 26</td>
+                        <td>4 days</td>
+                        <td>Watts Building (79 beds)</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 2</td>
+                        <td>June 23</td>
+                        <td>June 27</td>
+                        <td>June 22</td>
+                        <td>June 27</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="tennis">
+                        <td><strong>Tennis</strong></td>
+                        <td>-</td>
+                        <td>June 23</td>
+                        <td>June 27</td>
+                        <td>June 22</td>
+                        <td>June 27</td>
+                        <td>5 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-basketball">
+                        <td><strong>Men's Basketball</strong></td>
+                        <td>Session 2</td>
+                        <td>June 23</td>
+                        <td>June 26</td>
+                        <td>June 22</td>
+                        <td>June 26</td>
+                        <td>4 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="womens-basketball">
+                        <td><strong>Women's Basketball</strong></td>
+                        <td>Session 4</td>
+                        <td>June 23</td>
+                        <td>June 25</td>
+                        <td>June 22</td>
+                        <td>June 25</td>
+                        <td>3 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="baseball">
+                        <td><strong>Baseball</strong></td>
+                        <td>Session 3</td>
+                        <td>June 23</td>
+                        <td>June 26</td>
+                        <td>June 22</td>
+                        <td>June 26</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="immersion">
+                        <td><strong>Immersion Camps</strong></td>
+                        <td>Session 4</td>
+                        <td>June 27</td>
+                        <td>July 3</td>
+                        <td>June 26</td>
+                        <td>July 3</td>
+                        <td>7 days</td>
+                        <td>Watts Building (79 beds)</td>
+                    </tr>
+                    <tr class="womens-basketball">
+                        <td><strong>Women's Basketball</strong></td>
+                        <td>Session 5</td>
+                        <td>June 28</td>
+                        <td>July 2</td>
+                        <td>June 27</td>
+                        <td>July 2</td>
+                        <td>5 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 4</td>
+                        <td>June 30</td>
+                        <td>July 4</td>
+                        <td>June 29</td>
+                        <td>July 4</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="mens-soccer">
+                        <td><strong>Men's Soccer</strong></td>
+                        <td>Session 3</td>
+                        <td>July 5</td>
+                        <td>July 6</td>
+                        <td>July 4</td>
+                        <td>July 6</td>
+                        <td>2 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="larche">
+                        <td><strong>L'Arche</strong></td>
+                        <td>-</td>
+                        <td>July 7</td>
+                        <td>July 11</td>
+                        <td>July 6</td>
+                        <td>July 11</td>
+                        <td>5 days</td>
+                        <td>Duke/Jamieson/Ryburn Buildings</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 5</td>
+                        <td>July 7</td>
+                        <td>July 11</td>
+                        <td>July 6</td>
+                        <td>July 11</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="volleyball">
+                        <td><strong>Volleyball</strong></td>
+                        <td>Session 1</td>
+                        <td>July 7</td>
+                        <td>July 9</td>
+                        <td>July 6</td>
+                        <td>July 9</td>
+                        <td>3 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="womens-soccer">
+                        <td><strong>Women's Soccer</strong></td>
+                        <td>Session 2</td>
+                        <td>July 7</td>
+                        <td>July 10</td>
+                        <td>July 6</td>
+                        <td>July 10</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="baseball">
+                        <td><strong>Baseball</strong></td>
+                        <td>Session 4</td>
+                        <td>July 7</td>
+                        <td>July 10</td>
+                        <td>July 6</td>
+                        <td>July 10</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="lacrosse">
+                        <td><strong>Lacrosse</strong></td>
+                        <td>-</td>
+                        <td>July 8</td>
+                        <td>July 10</td>
+                        <td>July 7</td>
+                        <td>July 10</td>
+                        <td>3 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="volleyball">
+                        <td><strong>Volleyball</strong></td>
+                        <td>Session 2</td>
+                        <td>July 11</td>
+                        <td>July 18</td>
+                        <td>July 10</td>
+                        <td>July 18</td>
+                        <td>8 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="womens-soccer">
+                        <td><strong>Women's Soccer</strong></td>
+                        <td>Session 3</td>
+                        <td>July 14</td>
+                        <td>July 14</td>
+                        <td>July 13</td>
+                        <td>July 14</td>
+                        <td>1 day</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 6</td>
+                        <td>July 14</td>
+                        <td>July 18</td>
+                        <td>July 13</td>
+                        <td>July 18</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="s2f-track">
+                        <td><strong>S2F Track & Field</strong></td>
+                        <td>-</td>
+                        <td>July 16</td>
+                        <td>July 19</td>
+                        <td>July 15</td>
+                        <td>July 19</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities/Union</td>
+                    </tr>
+                    <tr class="football">
+                        <td><strong>Football</strong></td>
+                        <td>Session 2</td>
+                        <td>July 18</td>
+                        <td>July 19</td>
+                        <td>July 17</td>
+                        <td>July 19</td>
+                        <td>2 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-soccer">
+                        <td><strong>Men's Soccer</strong></td>
+                        <td>Session 4</td>
+                        <td>July 19</td>
+                        <td>July 25</td>
+                        <td>July 18</td>
+                        <td>July 25</td>
+                        <td>7 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="womens-soccer">
+                        <td><strong>Women's Soccer</strong></td>
+                        <td>Session 4</td>
+                        <td>July 20</td>
+                        <td>July 21</td>
+                        <td>July 19</td>
+                        <td>July 21</td>
+                        <td>2 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="mens-soccer">
+                        <td><strong>Men's & Women's Soccer</strong></td>
+                        <td>Combined</td>
+                        <td>July 20</td>
+                        <td>July 21</td>
+                        <td>July 19</td>
+                        <td>July 21</td>
+                        <td>2 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                    <tr class="id-tech">
+                        <td><strong>ID Tech Camps</strong></td>
+                        <td>Week 7</td>
+                        <td>July 21</td>
+                        <td>July 25</td>
+                        <td>July 20</td>
+                        <td>July 25</td>
+                        <td>5 days</td>
+                        <td>Richardson Building (130 beds)</td>
+                    </tr>
+                    <tr class="nc-writers">
+                        <td><strong>NC Writer's Network</strong></td>
+                        <td>-</td>
+                        <td>July 24</td>
+                        <td>July 27</td>
+                        <td>July 23</td>
+                        <td>July 27</td>
+                        <td>4 days</td>
+                        <td>Duke Building/Union</td>
+                    </tr>
+                    <tr class="mens-basketball">
+                        <td><strong>Men's Basketball</strong></td>
+                        <td>Session 3</td>
+                        <td>July 28</td>
+                        <td>July 31</td>
+                        <td>July 27</td>
+                        <td>July 31</td>
+                        <td>4 days</td>
+                        <td>Belk Building (332 beds)</td>
+                    </tr>
+                    <tr class="nc-youth-orchestra">
+                        <td><strong>NC Youth Orchestra</strong></td>
+                        <td>Session 1</td>
+                        <td>July 31</td>
+                        <td>August 2</td>
+                        <td>July 30</td>
+                        <td>August 2</td>
+                        <td>3 days</td>
+                        <td>Duke Performance Hall</td>
+                    </tr>
+                    <tr class="underrated">
+                        <td><strong>Underrated Showcase</strong></td>
+                        <td>-</td>
+                        <td>July 31</td>
+                        <td>August 3</td>
+                        <td>July 30</td>
+                        <td>August 3</td>
+                        <td>4 days</td>
+                        <td>Athletic facilities</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="busy-days">
+            <h3>🗓️ Quick Reference - Busy Sign Installation Days</h3>
+            
+            <div class="month-section">
+                <div class="month-title">📅 JUNE</div>
+                <div class="day-entry"><strong>June 4:</strong> McNab, Women's Basketball Session 1</div>
+                <div class="day-entry"><strong>June 7:</strong> Women's Soccer Session 1</div>
+                <div class="day-entry"><strong>June 8:</strong> Immersion Session 1, Lavner Education, Women's Basketball Session 2</div>
+                <div class="day-entry"><strong>June 10:</strong> Men's Soccer Session 1, Baseball Session 1</div>
+                <div class="day-entry"><strong>June 12:</strong> Men's Basketball Jay Bilas</div>
+                <div class="day-entry"><strong>June 13:</strong> Football Session 1</div>
+                <div class="day-entry"><strong>June 14:</strong> APSI Session 1, Men's Basketball Session 1</div>
+                <div class="day-entry"><strong>June 15:</strong> ID Tech Week 1, Immersion Session 2, Theatre, Wrestling, Baseball Session 2, Men's Soccer Session 2, Women's Basketball Session 3</div>
+                <div class="day-entry"><strong>June 21:</strong> DS Promise Program</div>
+                <div class="day-entry"><strong>June 22:</strong> APSI Session 2, Immersion Session 3, ID Tech Week 2, Tennis, Men's Basketball Session 2, Women's Basketball Session 4, Baseball Session 3</div>
+                <div class="day-entry"><strong>June 26:</strong> Immersion Session 4</div>
+                <div class="day-entry"><strong>June 27:</strong> Women's Basketball Session 5</div>
+                <div class="day-entry"><strong>June 29:</strong> ID Tech Week 4</div>
+            </div>
+
+            <div class="month-section">
+                <div class="month-title">📅 JULY</div>
+                <div class="day-entry"><strong>July 4:</strong> Men's Soccer Session 3</div>
+                <div class="day-entry"><strong>July 6:</strong> L'Arche, ID Tech Week 5, Volleyball Session 1, Women's Soccer Session 2, Baseball Session 4</div>
+                <div class="day-entry"><strong>July 7:</strong> Lacrosse</div>
+                <div class="day-entry"><strong>July 10:</strong> Volleyball Session 2</div>
+                <div class="day-entry"><strong>July 13:</strong> Women's Soccer Session 3, ID Tech Week 6</div>
+                <div class="day-entry"><strong>July 15:</strong> S2F Track & Field</div>
+                <div class="day-entry"><strong>July 17:</strong> Football Session 2</div>
+                <div class="day-entry"><strong>July 18:</strong> Men's Soccer Session 4</div>
+                <div class="day-entry"><strong>July 19:</strong> Women's Soccer Session 4, Men's & Women's Soccer Combined</div>
+                <div class="day-entry"><strong>July 20:</strong> ID Tech Week 7</div>
+                <div class="day-entry"><strong>July 23:</strong> NC Writer's Network</div>
+                <div class="day-entry"><strong>July 27:</strong> Men's Basketball Session 3</div>
+                <div class="day-entry"><strong>July 30:</strong> NC Youth Orchestra, Underrated Showcase</div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h4>📝 Important Notes</h4>
+            <ul>
+                <li>Some camps have overlapping dates and may share facilities</li>
+                <li>Volleyball Session 2 is an overnight camp (8 days)</li>
+                <li>Lavner Education runs continuously for 47 days</li>
+                <li>Multiple housing buildings may need signs for larger programs</li>
+                <li>Colors help identify different camp types - refer to legend above</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
